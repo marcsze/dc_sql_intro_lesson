@@ -11,3 +11,11 @@ To load the data set use the command:
 
 To quit use command  
 `.quit`
+
+#### Basic Queries
+
+**First Challenge Question**  
+Write a query that returns The year, month, day, species_id and weight in mg
+
+A: `SELECT year, month, day, species_id, ROUND(weight * 1000, 2) FROM surveys;`
+
