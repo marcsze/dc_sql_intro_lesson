@@ -17,9 +17,18 @@ To quit use command
 **First Challenge Question**  
 Write a query that returns The year, month, day, species_id and weight in mg
 
-A:
 ```sqlite3
 SELECT year, month, day, species_id, ROUND(weight * 1000, 2)
 FROM surveys;
+```
+
+**Second Challenge Question**  
+Write a query that returns the day, month, year, species_id, and weight (in kg) for individuals 
+caught on Plot 1 that weigh more than 75 g
+  
+```sqlite3
+SELECT day, month, year, species_id, ROUND(weight / 1000, 4)
+FROM surveys
+WHERE (plot_id = 1) AND (weight > 75);
 ```
 
