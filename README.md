@@ -1,6 +1,6 @@
 # Introduction to SQL
 
-### General Setup
+## General Setup
 
 If individuals don't want to use the mozilla firefox extension then we first need to check if the have SQLite installed.  
 This can be done by typing in `which sqlite3` into the terminal.  If none comes up and then install instructions can be found
@@ -12,7 +12,7 @@ To load the data set use the command:
 To quit use command  
 `.quit`
 
-#### Basic Queries
+## Basic Queries
 
 **First Challenge Question**  
 Write a query that returns The year, month, day, species_id and weight in mg
@@ -54,6 +54,24 @@ SELECT month, day, year, species_id, ROUND(weight / 1000, 2)
 FROM surveys
 WHERE (year = 1999)
 ORDER BY species_id ASC;
+```
+
+## Aggregation
+
+**COUNT and GROUP BY**  
+Write a query that returns: total weight, average weight, and the min and max weights for all animals caught over the duration of the survey. Can you modify it so that it outputs these values only for weights between 5 and 10?  
+
+*Base Answer*
+```sqlite3
+SELECT SUM(weight), AVG(weight), MIN(weight), MAX(weight)
+FROM surveys;
+```  
+
+*Weights Between 5 and 10*
+```sqlite3
+SELECT SUM(weight), AVG(weight), MIN(weight), MAX(weight)
+FROM surveys
+WHERE (weight > 5) AND (weight < 10);
 ```
 
 
