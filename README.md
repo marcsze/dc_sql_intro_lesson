@@ -32,3 +32,14 @@ FROM surveys
 WHERE (plot_id = 1) AND (weight > 75);
 ```
 
+**Sorting**
+Write a query that returns year, species_id, and weight in kg from the surveys table, sorted with the largest weights at the top.
+
+```sqlite3
+SELECT year, species_id, ROUND(weight / 1000, 2)
+FROM surveys
+ORDER BY weight DESC;
+```
+
+
+
