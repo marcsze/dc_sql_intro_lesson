@@ -9,8 +9,8 @@ This can be done by typing in `which sqlite3` into the terminal.  If none comes 
 To load the data set use the command (EDIT - This causes problems downstream):  
 `attach "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite" as db1;`
 
-Better way to load data is with this commonad:
-`sqlite3 "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite"
+Better way to load data is with this commonad:  
+`sqlite3 "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite"`
 
 To quit use command  
 `.quit`
