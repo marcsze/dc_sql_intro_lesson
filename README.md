@@ -96,11 +96,19 @@ GROUP BY year, species_id;
 ```sqlite3
 SELECT AVG(weight), species_id
 FROM surveys
-GROUP BY species_id, year
+GROUP BY species_id, year;
 ```
 
+**The "HAVING" keyword**
 
+Write a query that returns, from the species table, the number of genus in each taxa, only for the taxa with more than 10 genus.
 
+```sqlite3
+SELECT genus, COUNT(genus) AS totals
+FROM species
+GROUP BY taxa
+HAVING totals > 10;
+```
 
 
 
