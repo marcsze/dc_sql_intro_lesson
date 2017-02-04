@@ -74,4 +74,36 @@ FROM surveys
 WHERE (weight > 5) AND (weight < 10);
 ```
 
+Write queries that return:
+* How many individuals were counted in each year. a) in total; b) per each species.
+
+a)
+```sqlite3
+SELECT species_id, COUNT(*)
+FROM surveys
+GROUP BY year;
+```
+
+b)
+```sqlite3
+SELECT species_id, COUNT(*)
+FROM surveys
+GROUP BY year, species_id;
+```
+
+* Average weight of each species in each year. Can you modify the above queries combining them into one?
+
+```sqlite3
+SELECT AVG(weight), species_id
+FROM surveys
+GROUP BY species_id, year
+```
+
+
+
+
+
+
+
+
 
