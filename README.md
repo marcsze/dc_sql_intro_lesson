@@ -148,8 +148,23 @@ ON surveys.species_id = species.species_id
 GROUP BY plot_id, genus;
 ```
 
+Re-write the original query to keep all the entries present in the surveys table. How many records are returned by this query?
 
+```sqlite3
+SELECT COUNT(*)
+FROM surveys
+LEFT JOIN species
+USING (species_id);
+```
+Total is the same as the surveys count (35549)
 
+Count the number of records in the surveys table that have a NULL value in the species_id column.
+
+```sqlite3
+SELECT COUNT(*)
+FROM surveys
+WHERE species_id IS NULL;
+```
 
 
 
