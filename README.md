@@ -12,6 +12,9 @@ To load the data set use the command (EDIT - This causes problems downstream):
 Better way to load data is with this commonad:  
 `sqlite3 "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite"`
 
+**To make sure no lingering VIEWS are in the database use `DROP VIEW` command.**  
+**A very dangerous command would be the `DROP TABLE` command (removes everything).**
+
 To quit use command  
 `.quit`
 
