@@ -136,6 +136,20 @@ GROUP BY year
 ORDER BY totals DESC, year ASC;
 ```
 
+## Joins and Aliases
+
+Write a query that returns the genus, the species, and the weight of every individual captured at the site
+
+```sqlite3
+SELECT species.genus, species.species, surveys.weight, surveys.plot_id
+FROM surveys
+JOIN species
+ON surveys.species_id = species.species_id
+GROUP BY plot_id, genus;
+```
+
+
+
 
 
 
