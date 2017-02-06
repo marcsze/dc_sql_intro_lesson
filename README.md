@@ -166,6 +166,29 @@ FROM surveys
 WHERE species_id IS NULL;
 ```
 
+Write a query that returns the number of genus of the animals caught in each plot in descending order.
+
+```sqlite3
+SELECT surveys.plot_id, COUNT(species.genus)
+FROM surveys
+JOIN species
+ON surveys.species_id = species.species_id
+GROUP BY plot_id;
+```
+
+Write a query that finds the average weight of each rodent species (i.e., only include species with Rodent in the taxa field)
+
+```sqlite3
+SELECT AVG(surveys.weight), species.species, species.taxa AS selectors
+FROM surveys
+JOIN species
+ON surveys.species_id = species.species_id
+GROUP BY species
+HAVING selectors == 'Rodent';
+```
+
+
+
 
 
 
