@@ -138,6 +138,8 @@ ORDER BY totals DESC, year ASC;
 
 ## Joins and Aliases
 
+**Joins**
+
 Write a query that returns the genus, the species, and the weight of every individual captured at the site
 
 ```sqlite3
@@ -147,6 +149,8 @@ JOIN species
 ON surveys.species_id = species.species_id
 GROUP BY plot_id, genus;
 ```
+
+**Different join types**
 
 Re-write the original query to keep all the entries present in the surveys table. How many records are returned by this query?
 
@@ -165,6 +169,8 @@ SELECT COUNT(*)
 FROM surveys
 WHERE species_id IS NULL;
 ```
+
+**Combining joins with sorting and aggregation**
 
 Write a query that returns the number of genus of the animals caught in each plot in descending order.
 
@@ -187,6 +193,30 @@ GROUP BY species
 HAVING selectors == 'Rodent';
 ```
 
+**Functions**
+
+Write a query that returns 30 instead of NULL for values in the hindfoot_length column.
+
+```sqlite3
+SELECT hindfoot_length, IFNULL(hindfoot_length, 30) AS non_null_hindfoot_length
+FROM surveys;
+```
+
+Write a query that calculates the average hind-foot length of each species, assuming that unknown lengths are 30 (as above)
+
+```sqlite3
+SELECT AVG(IFNULL(hindfoot_length, 30))
+FROM surveys;
+```
+
+Write a query that returns genus names, sorted from longest genus name down to shortest.
+
+```sqlite3
+SELECT genus
+FROM species
+GROUP BY genus
+ORDER BY LENGTH(genus) DESC;
+```
 
 
 
