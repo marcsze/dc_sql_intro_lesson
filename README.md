@@ -12,6 +12,11 @@ This can be done by typing in `which sqlite3` into the terminal.  If none comes 
   * choose the portal_mammals.sqlite file
 * Once loaded navigate to the Execute SQL tab
 
+**[Link to Lesson Plan](https://github.com/datacarpentry/sql-ecology-lesson/blob/gh-pages/instructor-notes.md)**
+
+**[Link to Instructor Notes](https://github.com/datacarpentry/sql-ecology-lesson/blob/gh-pages/instructor-notes.md)**
+
+
 **Personal SQLite Instructions**
 
 To load the data set use the command (EDIT - This causes problems downstream):  
