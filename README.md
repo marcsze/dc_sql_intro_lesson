@@ -19,7 +19,7 @@ This can be done by typing in `which sqlite3` into the terminal.  If none comes 
 
 **Personal SQLite Instructions**
 
-To load the data set use the command (EDIT - This causes problems downstream):  
+To load the data set use the command (***EDIT*** - This causes problems downstream):  
 `attach "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite" as db1;`
 
 Better way to load data is with this command:  
@@ -146,6 +146,22 @@ HAVING totals > 10;
 **Saving Queries for future use**
 
 Write a query that returns the number of each species caught in each year sorted from most often caught species to the least occurring ones within each year starting from the most recent records. Save this query as a VIEW.
+
+Bring this up after the introduction of `CREATE VIEW`
+
+> **Example of how to query and write data file out as .csv**
+
+> ```sqlite3
+ .headers on
+ .mode csv
+ .output test.csv
+ CREATE VIEW summer_2000 AS
+ SELECT *
+ FROM surveys
+ WHERE year = 2000 AND (month > 4 AND month < 10);
+ .quit
+ ```
+>
 
 ```sqlite3
 CREATE VIEW challenges AS
