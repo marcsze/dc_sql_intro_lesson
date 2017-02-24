@@ -145,8 +145,6 @@ HAVING totals > 10;
 
 **Saving Queries for future use**
 
-Write a query that returns the number of each species caught in each year sorted from most often caught species to the least occurring ones within each year starting from the most recent records. Save this query as a VIEW.
-
 Bring this up after the introduction of `CREATE VIEW`
 
 > **Example of how to query and write data file out as .csv**
@@ -163,6 +161,8 @@ Bring this up after the introduction of `CREATE VIEW`
  ```
 >
 
+Write a query that returns the number of each species caught in each year sorted from most often caught species to the least occurring ones within each year starting from the most recent records. Save this query as a VIEW.
+  
 ```sqlite3
 CREATE VIEW challenges AS
 SELECT species_id, COUNT(species_id) AS totals
