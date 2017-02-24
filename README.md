@@ -31,6 +31,11 @@ Better way to load data is with this commonad:
 To quit use command  
 `.quit`
 
+## Visual Example of a Relational Database
+
+![example1](http://database.guide/wp-content/uploads/2016/06/sakila_full_database_schema_diagram.png)
+
+
 ## Basic Queries
 
 **First Challenge Question**  
