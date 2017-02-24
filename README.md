@@ -45,6 +45,19 @@ Reference can be found [here](https://www.pantz.org/software/sqlite/sqlite_comma
 ![example1](http://database.guide/wp-content/uploads/2016/06/sakila_full_database_schema_diagram.png)
 
 
+## Difference between SQL and SQLite
+
+Answers were taken from [here](https://www.quora.com/What-is-the-difference-between-SQL-and-SQLite) and [here](http://stackoverflow.com/questions/12666822/what-is-difference-between-sqlite-and-sql).
+
+SQL: It’s a Structured Query Language used to query a Database usually Relational Database Systems.  SQL is a standard that specifies how a relational schema is created, data is inserted or updated in the relations, transactions are started and stopped, etc.  Data Definition Language(DDL) and Data Manipulation Language(DML), Embedded SQL and Dynamic SQL are Components of SQL. 
+
+SQLite: It’s an Embeddable Relational Database Management Systems written in ANSI-C (American National Standars Institute C programming language).  SQLite is file-based whereas SQL Server and MySQL are server-based, SQLite supports many features of SQL and has high performance and does not support stored procedures.  SQLite is used in Android Development to implement the database concept.
+
+What's particularly notable about SQLite is that unlike all the others mentioned above, this database software doesn't come with a daemon that queries are passed through. This means that if multiple processes are using the database at once, they will be directly altering the data through the SQLite library and making the read / write data calls to the OS themselves. It also means that the locking mechanisms don't deal with contention very well.
+
+This isn't a problem for most applications that where one would think of using SQLite -- the small overhead benefits and easy data retrieval are worth it. However, if you'll be accessing your database with more than one process or don't consider mapping all your requests through one thread, it could be slightly troublesome.
+
+
 ## Basic Queries
 
 **First Challenge Question**  
