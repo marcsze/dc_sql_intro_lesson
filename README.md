@@ -22,14 +22,23 @@ This can be done by typing in `which sqlite3` into the terminal.  If none comes 
 To load the data set use the command (EDIT - This causes problems downstream):  
 `attach "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite" as db1;`
 
-Better way to load data is with this commonad:  
+Better way to load data is with this command:  
 `sqlite3 "UMichiganWorkStuff/Teaching_Courses/sql_dc_lesson/portal_mammals.sqlite"`
 
 **To make sure no lingering VIEWS are in the database use `DROP VIEW` command.**  
 **A very dangerous command would be the `DROP TABLE` command (removes everything).**
 
-To quit use command  
-`.quit`
+
+### Useful Commands
+
+Reference can be found [here](https://www.pantz.org/software/sqlite/sqlite_commands_and_general_usage.html).
+* view tables with: `.tables`
+* view breakdown of table with: `.schema species`
+* view database with: `.databases`
+* view seperator used during data read in: `.show`
+* change seperator used: `separator ,`
+* can import csv after changing seperator with: `.import test.csv test`
+* to quit use `.quit`
 
 ## Visual Example of a Relational Database
 
