@@ -40,6 +40,10 @@ Reference can be found [here](https://www.pantz.org/software/sqlite/sqlite_comma
 * can import csv after changing seperator with: `.import test.csv test`
 * to quit use `.quit`
 
+### Differences between . and no .
+
+Most of the time, sqlite3 just reads lines of input and passes them on to the SQLite library for execution. But input lines that begin with a dot (".") are intercepted and interpreted by the sqlite3 program itself. These "dot commands" are typically used to change the output format of queries, or to execute certain prepackaged query statements. For a listing of the available dot commands, you can enter ".help" at any time. Example table and resource can be found [here](https://www.sqlite.org/cli.html).
+
 ## Visual Example of a Relational Database
 
 ![example1](http://database.guide/wp-content/uploads/2016/06/sakila_full_database_schema_diagram.png)
