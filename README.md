@@ -270,7 +270,9 @@ GROUP BY genus
 ORDER BY LENGTH(genus) DESC;
 ```
 
+**SQL via Python**
 
+If there is time try and show the example from data carpentry found [here](http://www.datacarpentry.org/python-ecology-lesson/08-working-with-sql/).
 
 
 
