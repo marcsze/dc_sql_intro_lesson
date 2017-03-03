@@ -48,6 +48,10 @@ Most of the time, sqlite3 just reads lines of input and passes them on to the SQ
 
 ![example1](http://database.guide/wp-content/uploads/2016/06/sakila_full_database_schema_diagram.png)
 
+## A Better More Intuitive Example of a Relational Database
+
+This specific example was created by Arthur Endsley and can be found [here](https://github.com/arthur-e/swc-workshop/blob/master/sql-intro-ecology/sql_schema.pdf).
+
 
 ## Difference between SQL and SQLite
 
